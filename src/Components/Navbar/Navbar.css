@@ -1,0 +1,480 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background-color: rgba(247, 243, 237, 0.97);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-container {
+  width: min(92%, var(--container));
+
+  min-height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+
+/* LOGO */
+
+.navbar-logo {
+  flex-shrink: 0;
+
+  color: var(--color-dark);
+
+  font-family: var(--font-display);
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  line-height: 1;
+
+  transition: color 0.2s ease;
+}
+
+.navbar-logo:hover {
+  color: var(--color-accent);
+}
+
+
+/* NAV LINKS */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+
+  margin-left: auto;
+}
+
+.nav-link {
+  position: relative;
+
+  color: var(--color-muted);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-dark);
+}
+
+
+/* ACTIVE LINK */
+
+.nav-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: var(--color-accent);
+}
+
+
+/* RIGHT SIDE */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+
+/* LOGIN */
+
+.login-link {
+  padding: 10px 4px;
+
+  color: var(--color-dark);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: var(--color-accent);
+}
+
+
+/* CREATE ACCOUNT */
+
+.register-link {
+  padding: 11px 17px;
+
+  border: 1px solid var(--color-dark);
+  border-radius: 8px;
+
+  background-color: transparent;
+  color: var(--color-dark);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.register-link:hover {
+  background-color: var(--color-dark);
+
+  color: white;
+}
+
+
+/* USER MENU */
+
+.user-menu {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+}
+
+.user-name {
+  max-width: 130px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: var(--color-dark);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.user-name:hover {
+  color: var(--color-accent);
+}
+
+.logout-button {
+  border: none;
+
+  padding: 0;
+
+  background-color: transparent;
+
+  color: var(--color-muted);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.logout-button:hover {
+  color: var(--color-accent);
+}
+
+
+/* CART */
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 80px;
+
+  padding: 11px 15px;
+
+  border-radius: 8px;
+
+  background-color: var(--color-dark);
+  color: white;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cart-button:hover {
+  background-color: var(--color-accent);
+
+  transform: translateY(-1px);
+}
+
+.cart-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 21px;
+  height: 21px;
+
+  padding: 0 5px;
+
+  border-radius: 50%;
+
+  background-color: var(--color-accent);
+  color: white;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.mobile-menu-button {
+  display: none;
+
+  border: 1px solid var(--color-dark);
+  border-radius: 8px;
+
+  padding: 10px 15px;
+
+  background-color: transparent;
+  color: var(--color-dark);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+  .navbar-container {
+    gap: 22px;
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-actions {
+    gap: 8px;
+  }
+
+  .register-link {
+    padding: 10px 13px;
+  }
+
+  .user-name {
+    max-width: 100px;
+  }
+
+}
+
+
+/* SMALL TABLET */
+
+@media (max-width: 900px) {
+
+  .navbar-container {
+    min-height: 76px;
+
+    gap: 16px;
+  }
+
+  .navbar-links {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .login-link {
+    font-size: 0.8rem;
+  }
+
+  .register-link {
+    padding: 9px 11px;
+
+    font-size: 0.75rem;
+  }
+
+  .cart-button {
+    min-width: 72px;
+
+    padding: 10px 12px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .navbar-container {
+    min-height: 74px;
+
+    width: 90%;
+
+    gap: 12px;
+  }
+
+  .navbar-links {
+    position: absolute;
+
+    top: 74px;
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    margin-left: 0;
+
+    padding: 10px 5% 20px;
+
+    background-color: var(--color-bg);
+
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid var(--color-border);
+
+    font-size: 0.9rem;
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .navbar-actions {
+    margin-left: auto;
+
+    gap: 8px;
+  }
+
+  .login-link,
+  .register-link,
+  .user-menu {
+    display: none;
+  }
+
+  .cart-button {
+    min-width: 70px;
+
+    padding: 10px 12px;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+  .navbar-container {
+    width: 90%;
+
+    gap: 8px;
+  }
+
+  .navbar-logo {
+    font-size: 1.7rem;
+  }
+
+  .navbar-actions {
+    gap: 6px;
+  }
+
+  .cart-button {
+    min-width: auto;
+
+    padding: 9px 10px;
+  }
+
+  .mobile-menu-button {
+    padding: 9px 11px;
+  }
+
+}
+
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 360px) {
+
+  .navbar-logo {
+    font-size: 1.55rem;
+  }
+
+  .cart-button {
+    padding: 8px 9px;
+  }
+
+  .mobile-menu-button {
+    padding: 8px 10px;
+
+    font-size: 0.75rem;
+  }
+
+}

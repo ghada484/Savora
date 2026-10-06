@@ -1,0 +1,204 @@
+.create-food-page {
+  min-height: calc(100vh - 82px);
+  padding: 70px 0 100px;
+  background-color: var(--color-bg);
+}
+
+.create-food-header {
+  margin-bottom: 45px;
+}
+
+.create-food-header h1 {
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.create-food-header p {
+  max-width: 600px;
+  margin-top: 15px;
+  color: var(--color-muted);
+}
+
+.create-food-card {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 45px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+}
+
+.form-error {
+  margin-bottom: 30px;
+  padding: 14px 16px;
+  border: 1px solid #dfb7aa;
+  border-radius: 8px;
+  background-color: #f9eeeb;
+  color: #9a4935;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.form-section {
+  padding-bottom: 45px;
+  margin-bottom: 45px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.form-section-heading {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.form-section-heading > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.form-section-heading h2 {
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+
+.form-section-heading p {
+  margin-top: 6px;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 9px;
+  color: var(--color-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  outline: none;
+  background-color: #fcfaf7;
+  color: var(--color-dark);
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  background-color: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa29b;
+}
+
+.form-group small {
+  margin-top: 7px;
+  color: var(--color-muted);
+  font-size: 0.72rem;
+}
+
+.create-food-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancel-food-button,
+.save-food-button {
+  padding: 13px 24px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-food-button {
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-dark);
+}
+
+.cancel-food-button:hover {
+  border-color: var(--color-dark);
+}
+
+.save-food-button {
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-dark);
+  color: white;
+}
+
+.save-food-button:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 700px) {
+  .create-food-page {
+    padding: 50px 0 70px;
+  }
+
+  .create-food-card {
+    padding: 25px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group-full {
+    grid-column: auto;
+  }
+
+  .create-food-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-food-button,
+  .save-food-button {
+    width: 100%;
+  }
+}

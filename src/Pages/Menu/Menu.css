@@ -1,0 +1,644 @@
+.menu-page {
+  background-color: var(--color-bg);
+}
+
+
+/* =========================
+   MENU HEADER
+========================= */
+
+.menu-header {
+  background-color: var(--color-dark);
+
+  color: white;
+
+  padding: 100px 0;
+}
+
+.menu-header .eyebrow {
+  color: #d98a68;
+}
+
+.menu-header h1 {
+  max-width: 900px;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+}
+
+.menu-header h1 span {
+  color: #d98a68;
+}
+
+.menu-header p {
+  max-width: 520px;
+
+  margin-top: 28px;
+
+  color: #c8c1bb;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.menu-toolbar {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+.search-form {
+  width: 100%;
+  max-width: 650px;
+
+  display: flex;
+
+  border: 1px solid var(--color-border);
+
+  background-color: white;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.search-form input {
+  flex: 1;
+
+  min-width: 0;
+
+  border: none;
+
+  outline: none;
+
+  padding: 16px 18px;
+
+  background: transparent;
+
+  color: var(--color-dark);
+
+  font-size: 0.9rem;
+}
+
+.search-form input::placeholder {
+  color: #aaa39c;
+}
+
+.search-form button {
+  flex-shrink: 0;
+
+  border: none;
+
+  padding: 0 25px;
+
+  background-color: var(--color-dark);
+
+  color: white;
+
+  font-weight: 600;
+
+  transition: background-color 0.2s ease;
+}
+
+.search-form button:hover {
+  background-color: var(--color-accent);
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.menu-categories {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-bottom: 50px;
+}
+
+.menu-categories button {
+  border: 1px solid var(--color-border);
+
+  background-color: transparent;
+
+  color: var(--color-muted);
+
+  padding: 9px 16px;
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  border-radius: 8px;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.menu-categories button:hover {
+  border-color: var(--color-dark);
+
+  color: var(--color-dark);
+}
+
+.menu-categories button.active {
+  background-color: var(--color-dark);
+
+  border-color: var(--color-dark);
+
+  color: white;
+}
+
+
+/* =========================
+   RESULT HEADER
+========================= */
+
+.menu-result-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+
+  color: var(--color-muted);
+
+  font-size: 0.85rem;
+}
+
+.clear-filter {
+  flex-shrink: 0;
+
+  border: none;
+
+  background: none;
+
+  color: var(--color-accent);
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   MENU GRID
+========================= */
+
+.menu-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.menu-card {
+  min-width: 0;
+
+  background-color: white;
+
+  color: inherit;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(36, 33, 31, 0.08);
+}
+
+.menu-card-image {
+  position: relative;
+
+  height: 310px;
+
+  overflow: hidden;
+}
+
+.menu-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.menu-card:hover .menu-card-image img {
+  transform: scale(1.04);
+}
+
+.menu-rating {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  padding: 7px 10px;
+
+  background-color: white;
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+}
+
+.menu-card-content {
+  padding: 22px;
+}
+
+.menu-card-cuisine {
+  color: var(--color-accent);
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.3px;
+}
+
+.menu-card h2 {
+  margin-top: 7px;
+
+  color: var(--color-dark);
+
+  font-family: var(--font-display);
+
+  font-size: 1.5rem;
+
+  line-height: 1.2;
+}
+
+.menu-card-info {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-top: 16px;
+
+  color: var(--color-muted);
+
+  font-size: 0.78rem;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.menu-status {
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: var(--color-muted);
+}
+
+.menu-status h2 {
+  font-family: var(--font-display);
+
+  color: var(--color-dark);
+}
+
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .menu-header {
+    padding: 85px 0;
+  }
+
+  .menu-header h1 {
+    font-size: clamp(3.4rem, 7vw, 5.5rem);
+  }
+
+  .menu-grid {
+    gap: 22px;
+  }
+
+  .menu-card-image {
+    height: 290px;
+  }
+
+  .menu-card-content {
+    padding: 20px;
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+  .menu-header {
+    padding: 75px 0;
+  }
+
+  .menu-header h1 {
+    font-size: clamp(3.2rem, 8vw, 5rem);
+  }
+
+  .menu-header p {
+    max-width: 600px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+  }
+
+  .menu-card-image {
+    height: 310px;
+  }
+}
+
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .menu-header {
+    padding: 65px 0;
+  }
+
+  .menu-header h1 {
+    font-size: clamp(3rem, 9vw, 4.5rem);
+  }
+
+  .menu-header p {
+    margin-top: 22px;
+
+    font-size: 0.95rem;
+  }
+
+  .menu-categories {
+    margin-bottom: 40px;
+  }
+
+  .menu-grid {
+    gap: 18px;
+  }
+
+  .menu-card-image {
+    height: 280px;
+  }
+
+  .menu-card-content {
+    padding: 18px;
+  }
+
+  .menu-card h2 {
+    font-size: 1.35rem;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .menu-header {
+    padding: 60px 0;
+  }
+
+  .menu-header h1 {
+    font-size: 3.4rem;
+
+    letter-spacing: -1.5px;
+
+    line-height: 0.98;
+  }
+
+  .menu-header p {
+    max-width: 100%;
+
+    margin-top: 20px;
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+  }
+
+
+  .menu-toolbar {
+    margin-bottom: 22px;
+  }
+
+  .search-form {
+    max-width: 100%;
+  }
+
+  .search-form input {
+    padding: 14px;
+
+    font-size: 0.85rem;
+  }
+
+  .search-form button {
+    padding: 0 17px;
+
+    font-size: 0.82rem;
+  }
+
+
+  .menu-categories {
+    gap: 7px;
+
+    margin-bottom: 35px;
+  }
+
+  .menu-categories button {
+    padding: 8px 13px;
+
+    font-size: 0.75rem;
+  }
+
+
+  .menu-result-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .menu-card-image {
+    height: 320px;
+  }
+
+  .menu-card-content {
+    padding: 19px;
+  }
+
+  .menu-card h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .menu-header {
+    padding: 55px 0;
+  }
+
+  .menu-header h1 {
+    font-size: 3rem;
+  }
+
+  .menu-header p {
+    font-size: 0.9rem;
+  }
+
+
+  .search-form input {
+    padding: 13px;
+
+    font-size: 0.82rem;
+  }
+
+  .search-form button {
+    padding: 0 14px;
+
+    font-size: 0.78rem;
+  }
+
+
+  .menu-categories {
+    gap: 6px;
+  }
+
+  .menu-categories button {
+    padding: 8px 11px;
+  }
+
+
+  .menu-card-image {
+    height: 280px;
+  }
+
+  .menu-card-content {
+    padding: 17px;
+  }
+
+  .menu-card-cuisine {
+    font-size: 0.65rem;
+  }
+
+  .menu-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .menu-card-info {
+    gap: 12px;
+
+    font-size: 0.75rem;
+  }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+  .menu-header {
+    padding: 50px 0;
+  }
+
+  .menu-header h1 {
+    font-size: 2.7rem;
+  }
+
+  .menu-header p {
+    font-size: 0.86rem;
+  }
+
+
+  .search-form input {
+    padding: 12px 11px;
+  }
+
+  .search-form button {
+    padding: 0 12px;
+  }
+
+
+  .menu-categories button {
+    padding: 7px 10px;
+
+    font-size: 0.72rem;
+  }
+
+
+  .menu-card-image {
+    height: 250px;
+  }
+
+  .menu-card-content {
+    padding: 16px;
+  }
+}

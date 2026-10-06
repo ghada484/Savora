@@ -1,0 +1,223 @@
+.edit-food-page {
+  min-height: calc(100vh - 82px);
+  padding: 70px 0 100px;
+  background-color: var(--color-bg);
+}
+
+.edit-food-header {
+  margin-bottom: 45px;
+}
+
+.edit-food-header h1 {
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.edit-food-header p {
+  max-width: 600px;
+  margin-top: 15px;
+  color: var(--color-muted);
+}
+
+.edit-food-card {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 45px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+}
+
+.edit-form-section {
+  padding-bottom: 45px;
+  margin-bottom: 45px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.edit-section-heading {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.edit-section-heading > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.edit-section-heading h2 {
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+
+.edit-section-heading p {
+  margin-top: 6px;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.edit-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.edit-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-full {
+  grid-column: 1 / -1;
+}
+
+.edit-form-group label {
+  margin-bottom: 9px;
+  color: var(--color-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.edit-form-group input,
+.edit-form-group textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  outline: none;
+  background-color: #fcfaf7;
+  color: var(--color-dark);
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.edit-form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.edit-form-group input:focus,
+.edit-form-group textarea:focus {
+  border-color: var(--color-accent);
+  background-color: white;
+}
+
+.edit-form-group small {
+  margin-top: 7px;
+  color: var(--color-muted);
+  font-size: 0.72rem;
+}
+
+.edit-form-error {
+  margin-bottom: 30px;
+  padding: 14px 16px;
+  border: 1px solid #dfb7aa;
+  border-radius: 8px;
+  background-color: #f9eeeb;
+  color: #9a4935;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.edit-food-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.edit-cancel-button,
+.edit-save-button {
+  padding: 13px 24px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-cancel-button {
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-dark);
+}
+
+.edit-cancel-button:hover {
+  border-color: var(--color-dark);
+}
+
+.edit-save-button {
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-dark);
+  color: white;
+}
+
+.edit-save-button:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+}
+
+.edit-food-loading,
+.edit-food-error {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.edit-food-error h2 {
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: 2rem;
+}
+
+.edit-food-error button {
+  margin-top: 20px;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-dark);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .edit-food-page {
+    padding: 50px 0 70px;
+  }
+
+  .edit-food-card {
+    padding: 25px 20px;
+  }
+
+  .edit-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-full {
+    grid-column: auto;
+  }
+
+  .edit-food-actions {
+    flex-direction: column-reverse;
+  }
+
+  .edit-cancel-button,
+  .edit-save-button {
+    width: 100%;
+  }
+}

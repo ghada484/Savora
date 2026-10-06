@@ -1,0 +1,222 @@
+.manage-menu-page {
+  min-height: calc(100vh - 82px);
+  padding: 70px 0 100px;
+  background-color: var(--color-bg);
+}
+
+.manage-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.manage-menu-header h1 {
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.manage-menu-header p {
+  max-width: 600px;
+  margin-top: 15px;
+  color: var(--color-muted);
+}
+
+.menu-controls {
+  margin-bottom: 35px;
+}
+
+.menu-search {
+  margin-bottom: 20px;
+}
+
+.menu-search input {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  outline: none;
+  background-color: var(--color-surface);
+  color: var(--color-dark);
+  font-size: 0.9rem;
+}
+
+.menu-search input:focus {
+  border-color: var(--color-accent);
+}
+
+.cuisine-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.cuisine-filter {
+  padding: 9px 15px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cuisine-filter:hover,
+.cuisine-filter.active {
+  border-color: var(--color-dark);
+  background-color: var(--color-dark);
+  color: white;
+}
+
+.manage-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.manage-food-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+}
+
+.manage-food-image {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+}
+
+.manage-food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.manage-food-card:hover
+.manage-food-image img {
+  transform: scale(1.03);
+}
+
+.manage-food-image span {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: rgba(36, 33, 31, 0.9);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.manage-food-content {
+  padding: 20px;
+}
+
+.manage-food-content h2 {
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.manage-food-content p {
+  margin-top: 7px;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+.manage-food-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.edit-food-button,
+.delete-food-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-food-button {
+  border: 1px solid var(--color-dark);
+  background-color: transparent;
+  color: var(--color-dark);
+}
+
+.edit-food-button:hover {
+  background-color: var(--color-dark);
+  color: white;
+}
+
+.delete-food-button {
+  border: 1px solid #c9aaa0;
+  background-color: transparent;
+  color: #a64c36;
+}
+
+.delete-food-button:hover {
+  background-color: #a64c36;
+  color: white;
+}
+
+.menu-loading,
+.no-menu-results {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.no-menu-results h2 {
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: 2rem;
+}
+
+.no-menu-results p {
+  margin-top: 8px;
+  color: var(--color-muted);
+}
+
+@media (max-width: 1000px) {
+  .manage-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .manage-menu-page {
+    padding: 50px 0 70px;
+  }
+
+  .manage-menu-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .manage-menu-header .primary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .manage-menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .manage-food-image {
+    height: 250px;
+  }
+}
