@@ -1,70 +1,303 @@
-# Getting Started with Create React App
+# Savora
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern restaurant ordering platform built with React, designed to provide a smooth food discovery, ordering, and restaurant management experience.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+https://savora-rho-amber.vercel.app/
 
-### `npm start`
+## GitHub Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://github.com/ghada484/Savora
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Overview
 
-### `npm test`
+Savora is a front-end restaurant ordering platform that allows customers to explore dishes, search and filter the menu, manage their cart, place orders, and track their order status.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project also includes a demo restaurant administration dashboard for managing menu items and customer orders.
 
-### `npm run build`
+The application is built with React and uses a real external API for recipe data, while authentication, cart data, custom menu items, and orders are handled through LocalStorage for the front-end demo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Customer Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Browse restaurant dishes
+* Search for dishes
+* Filter dishes by category
+* View detailed food information
+* Add dishes to cart
+* Increase and decrease item quantities
+* Remove items from cart
+* View cart subtotal and delivery fee
+* Complete checkout
+* Choose a payment method
+* Place restaurant orders
+* View order confirmation
+* View previous orders
+* View individual order details
+* Track order status
+* Manage customer profile
+* Responsive design for desktop, tablet, and mobile
 
-### `npm run eject`
+### Authentication
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Customer registration
+* Customer login
+* Logout
+* Protected customer routes
+* Admin authentication
+* Admin-protected routes
+* Demo admin account
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Admin Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Restaurant dashboard
+* View total orders
+* View total revenue
+* View confirmed orders
+* View delivered orders
+* View recent orders
+* Manage menu items
+* Search menu items
+* Filter menu items
+* Create new food items
+* Edit existing food items
+* Delete food items
+* Manage customer orders
+* Search orders
+* Filter orders by status
+* Update order status
+* View complete order details
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tech Stack
 
-## Learn More
+* React
+* React Router
+* Context API
+* Axios
+* JavaScript
+* CSS
+* LocalStorage
+* DummyJSON Recipes API
+* Vercel
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## API Integration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Savora uses the DummyJSON Recipes API to retrieve real recipe data.
 
-### Code Splitting
+Main endpoints used:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Get recipes
+* Get recipe by ID
+* Search recipes
+* Get recipe tags
+* Get recipes by tag
 
-### Analyzing the Bundle Size
+API Base URL:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+https://dummyjson.com
 
-### Making a Progressive Web App
+## State Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The project uses React Context API to manage application state.
 
-### Advanced Configuration
+### AuthContext
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Handles:
 
-### Deployment
+* Authentication
+* Registration
+* Login
+* Logout
+* User profile updates
+* Admin role detection
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### CartContext
 
-### `npm run build` fails to minify
+Handles:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Cart items
+* Adding products
+* Removing products
+* Quantity management
+* Cart count
+* Subtotal
+* Delivery fee
+* Cart total
+
+### OrderContext
+
+Handles:
+
+* Creating orders
+* Retrieving customer orders
+* Retrieving individual orders
+* Updating order status
+
+### ToastContext
+
+Provides reusable toast notifications across the application.
+
+## Project Structure
+
+```text
+src/
+├── assets/
+│   └── images/
+│
+├── Components/
+│   ├── AdminProtectedRoute/
+│   ├── CartItem/
+│   ├── CategoryCard/
+│   ├── FoodCard/
+│   ├── Footer/
+│   ├── Hero/
+│   ├── Loading/
+│   ├── Navbar/
+│   ├── ProtectedRoute/
+│   └── SearchBar/
+│
+├── Pages/
+│   ├── About/
+│   ├── AdminOrderDetails/
+│   ├── Cart/
+│   ├── Checkout/
+│   ├── CreateFood/
+│   ├── EditFood/
+│   ├── FoodDetails/
+│   ├── Home/
+│   ├── Login/
+│   ├── ManageMenu/
+│   ├── ManageOrders/
+│   ├── Menu/
+│   ├── MyOrders/
+│   ├── NotFound/
+│   ├── OrderConfirmation/
+│   ├── OrderDetails/
+│   ├── Profile/
+│   ├── Register/
+│   └── RestaurantDashboard/
+│
+├── context/
+│   ├── AuthContext.js
+│   ├── CartContext.js
+│   ├── FoodContext.js
+│   ├── OrderContext.js
+│   └── ToastContext.js
+│
+├── data/
+│   └── foods.js
+│
+├── services/
+│   └── api.js
+│
+├── App.js
+└── index.css
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ghada484/Savora.git
+```
+
+Navigate to the project:
+
+```bash
+cd Savora
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm start
+```
+
+The application will run locally on:
+
+```text
+http://localhost:3000
+```
+
+## Production Build
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+## Demo Admin Account
+
+Use the following credentials to access the restaurant dashboard:
+
+```text
+Email: admin@savora.com
+Password: admin123
+```
+
+> This is a front-end demo account. Authentication and user data are stored in LocalStorage and are not intended for production security.
+
+## Design
+
+Savora follows a modern editorial restaurant design direction with:
+
+* Warm ivory backgrounds
+* Charcoal typography
+* Terracotta accents
+* Editorial-style typography
+* Food-focused imagery
+* Clean layouts
+* Rounded buttons and cards
+* Responsive layouts
+* Subtle micro-interactions
+* Mobile-first considerations
+
+## Responsive Design
+
+Savora is designed to work across:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+The main pages and customer/admin flows have been tested across responsive layouts.
+
+## Future Improvements
+
+The current version focuses on the front-end experience.
+
+Possible future improvements include:
+
+* Node.js and Express backend
+* MongoDB database
+* JWT authentication
+* Secure password hashing
+* Real restaurant accounts
+* Real payment integration
+* Real-time order tracking
+* Backend menu management
+* Image upload system
+* Restaurant delivery management
+
+## Author
+
+**Ghada Abdalla**
+
+Systems & Computers Engineering
+
+Front-End Developer
+
+## License
+
+This project was created for portfolio and educational purposes.
